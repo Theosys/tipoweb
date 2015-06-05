@@ -1,0 +1,287 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background:url('../images/fondo 2.png') no-repeat center;
+  background-size: cover;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+section {
+  padding: 10px 0;
+}
+
+footer {
+  color: #ffffff;
+}
+
+.page {
+  background:url('../images/fondo 1.png') no-repeat;
+  background-size: cover;
+}
+
+.inline {
+  display: inline-block;
+}
+
+.block {
+  display: block;
+}
+
+.center {
+  text-align: center;
+}
+
+.justify {
+  text-align: justify;
+}
+
+.clear-left {
+  clear: left;
+}
+
+.clear-right {
+  clear: right;
+}
+
+.logo {
+  height: 200px;
+  width: auto;
+}
+
+.icon {
+  width: 50px;
+  height: auto;
+  border-radius: 50%;
+}
+
+.social-header {
+  float: right;
+  padding: 30px 30px 0 0;
+}
+
+.menu-header {
+  position: relative;
+}
+
+.menu-item {
+  border-right: solid;
+  border-width: 1px;
+  width: 9%;
+  padding: 0 5px;
+  top: 0px;
+  box-sizing: border-box;
+}
+
+.menu-item-link {
+  color: #000000;
+  text-decoration: none;
+  font-weight:  bold;
+}
+
+
+
+
+
+.slide {
+  position: relative;
+}
+
+.slide img {
+  position: absolute;
+}
+
+.slide-img2, .slide-img3 {
+  display: none;
+}
+
+
+
+
+
+
+.footer-top {
+  background:url('../images/PIE_ULTIMO-01.png');
+  height: 300px;
+}
+
+.footer-bot {
+  background:url('../images/PIE_ULTIMO-02.png');
+}
+
+.footer-left {
+  width: 70%;
+  float: left;
+  padding: 0 50px;
+  box-sizing: border-box;
+}
+
+.footer-right {
+  width: 30%;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.footer-title {
+  font-size: 20px;
+  margin: 10px 0 30px 0;
+}
+
+.footer-parrafo {
+  margin: 0 50px;
+}
+
+.footer-logo {
+  margin: 20px 0 0 0;
+  width: 150px;
+}
+
+.footer-icon-list {
+  margin: 30px 0 0 0;
+}
+
+.footer-icon {
+  background: #000000;
+}
+
+.footer-list {
+  padding: 50px 0 0 0;
+}
+
+.footer-item {
+  border-right: solid;
+  border-width: 1px;
+  box-sizing: border-box;
+  padding: 0 5px;
+}
+
+.footer-item-link {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer-left-title {
+  font-size: 40px;
+}
+
+.footer-left-parrafo {
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+}
+
+.footer-left-inputtext {
+  width: 100%;
+  margin: 5px 0;
+}
+
+.footer-left-button {
+  float: right;
+  text-decoration: none;
+  font-size: 15px;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+
+
+
+
+.home-1 {
+  background: #ffffff;
+}
+
+.article-left {
+  width: 45%;
+  height: 550px;
+  float: left;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+.article-right {
+  width: 55%;
+  padding: 20px;
+  box-sizing: border-box;
+  height: 550px;
+}
+
+.article-title-1 {
+  font-size: 50px;
+  padding: 0 20%;
+}
+
+.article-title-2 {
+  font-size: 40px;
+  padding: 0 20% 0 5%;
+}
+
+.article-parrafo-1{
+  padding: 0 22%;
+  font-size: 25px;
+  color: #5B5D68;
+}
+
+.article-image {
+  width: 95%;
+  padding: 50px 0;
+  height: 400px;
+}
+
+.article-footer-list {
+  float: left;
+  width: 85%;
+  height: 150px;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.article-footer-button {
+  background:url('../images/PIE_ULTIMO-01.png');
+  float: right;
+  width: 15%;
+  height: 150px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.button-me {
+  font-size: 70px;
+  width: 30%;
+  float: left;
+  font-weight: bold;
+  padding: 30px 0 0 10px;  
+}
+
+.button-signo {
+  font-size: 150px;
+  font-weight: bold;
+  width: 20%;
+  float: right;
+  padding: 0 30% 0 0;
+}
+
+.button-quedara {
+  font-size: 30px;
+  font-weight: bold;
+  width: 30%;
+  float: left;
+  padding: 0 0 0 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+.last {
+  border-right: none;
+}
