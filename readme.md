@@ -25,3 +25,11 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ### License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+
+
+
+
+Consideraciones:
+Se necesita tener instalado PHP con la extension mcrypt activa, un servidor web y mysql.
+Para configurar la web se debe crear una base de datos mysql, y cambiar los datos del archivo .env relativos a la conexion
+como corresponda, despues debemos restaurar la base de datos a partir del archivo db_tipo.sql. 
