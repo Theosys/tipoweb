@@ -1,3 +1,5 @@
+/*Estilos gererales*/
+
 * {
   margin: 0;
   padding: 0;
@@ -59,6 +61,13 @@ footer {
   border-radius: 50%;
 }
 
+
+
+
+
+
+
+/*Estilos del header*/
 .social-header {
   float: right;
   padding: 30px 30px 0 0;
@@ -86,24 +95,7 @@ footer {
 
 
 
-
-.slide {
-  position: relative;
-}
-
-.slide img {
-  position: absolute;
-}
-
-.slide-img2, .slide-img3 {
-  display: none;
-}
-
-
-
-
-
-
+/*Estilos del footer*/
 .footer-top {
   background:url('../images/PIE_ULTIMO-01.png');
   height: 300px;
@@ -190,7 +182,7 @@ footer {
 
 
 
-
+/*Estilos de los articulos o secciones*/
 .home-1 {
   background: #ffffff;
 }
@@ -281,7 +273,31 @@ footer {
 
 
 
-
+/*Estilo para eliminar el borde derecho del ultimo elemento en los menus*/
 .last {
   border-right: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*estilo para los slider en prueba*/
+.slide {
+  position: relative;
+}
+
+.slide img {
+  position: absolute;
+}
+
+.slide-img2, .slide-img3 {
+  display: none;
 }
