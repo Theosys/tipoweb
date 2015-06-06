@@ -9,13 +9,25 @@
 			<span class="block article-parrafo-1">SOMOS UNA EMPRESA JOVEN CREATIVA DEDICADA AL DISEÑO TIPOGRAFICO PARA DIFUNDIRLO COMO ARTE</span>	
 		</div>
 		<div class="inline article-right">
-			<div class="slide">
-				<figure>
-					<img class="article-image slide-img1 slide img" src="/images/slideshow/slideshow-1.jpg">
-					<img class="article-image slide-img2 slide-img" src="/images/slideshow/slideshow-2.jpg">
-					<img class="article-image slide-img3 slide-img" src="/images/slideshow/slideshow-3.jpg">
-				</figure>
-			</div>
+			<div class="article-image">
+				<script src="/js/jssor.js"></script>
+				<script src="/js/jssor.slider.js"></script>
+				<script>
+				    jssor_slider1_starter = function (containerId) {
+				        var options = { $AutoPlay: true };
+				        var jssor_slider1 = new $JssorSlider$(containerId, options);
+				    };
+				</script>
+				<div id="slider1_container" style="position: relative; top: 0px; left: 0px; width: 600px; height: 400px;">
+				    <!-- Slides Container -->
+				    <div u="slides" style="cursor: move; position: absolute; overflow: hidden; left: 0px; top: 0px; width: 600px; height: 400px;">
+				        <div><img u="image" src="/images/slideshow/slideshow-1.jpg" /></div>
+				        <div><img u="image" src="/images/slideshow/slideshow-2.jpg" /></div>
+				    </div>
+				    <!-- Trigger -->
+				    <script>jssor_slider1_starter('slider1_container');</script>
+				</div>
+			</div>	
 		</div>
 	</div>
 	<div class="clear-left">
