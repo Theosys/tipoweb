@@ -7,11 +7,11 @@
 	<link rel="stylesheet" href="/css/estilo.css">
 	<link rel="stylesheet" href="/css/producto.css">	
 	<script type="text/javascript" src="/js/angular-1.4.0.js"></script>
-    <script type="text/javascript" src="/js/main.js"></script>
-    <script type="text/javascript" src="/js/jquery-1.11.3.js"></script>
-    <script type="text/javascript" src="/js/slide.js"></script>
+	<script type="text/javascript" src="/js/angular-route.js"></script>
+	<script type="text/javascript" src="/js/jquery-1.11.3.js"></script>
+    <script type="text/javascript" src="/js/main.js"></script> 
 </head>
-<body>
+<body ng-app="angularApp" ng-controller="mainController as vm">
 	<div class="page">
 		<header>
 			<div class="inline">
@@ -34,7 +34,7 @@
 		       			<li class="inline menu-item"><a class="menu-item-link" href="{{ url('/') }}">HOME</a></li>
 		       			<li class="inline menu-item"><a class="menu-item-link" href="{{ url('/') }}">QUIENES SOMOS</a></li>
 		       			<li class="inline menu-item"><a class="menu-item-link" href="{{ url('/') }}">MUJERES</a></li>
-		       			<li class="inline menu-item"><a class="menu-item-link" href="{{ url('/products') }}">HOMBRES</a></li>
+		       			<li class="inline menu-item"><a class="menu-item-link" href="" ng-click="vm.getProductos()">HOMBRES</a></li>
 		       			<li class="inline menu-item"><a class="menu-item-link" href="{{ url('/') }}">PRENSA</a></li>
 		       			<li class="inline menu-item"><a class="menu-item-link" href="{{ url('/') }}">CONFECCIONES</a></li>
 		       			<li class="inline menu-item last"><a class="menu-item-link" href="{{ url('/') }}">QUIERES SER TIPO</a></li>
@@ -42,7 +42,7 @@
 				</nav>
 			</div>
 		</header>
-		<section>
+		<section id="content">
 			@yield('content')
 		</section>
 		<footer>
