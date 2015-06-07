@@ -3,8 +3,8 @@
 @endif
 @foreach($productos as $item)
 	<a href="" ng-click="vm.getProductoByid({{$item->id}})">
-		<div class="container pro_thumb_con">
-			<img class="producto_thumb" src="{{ $item->url_imagen }}" alt="">
+		<div class="container1-product inline">
+			<img class="thumbnail1-product" src="{{ $item->url_imagen }}" alt="">
 		</div>
 	</a>
 @endforeach

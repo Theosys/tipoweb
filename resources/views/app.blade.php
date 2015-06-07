@@ -5,9 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
 	<title>La tipografía aplicada al diseño se apodera de la moda urbana</title>
 	<link rel="stylesheet" href="/css/estilo.css">
-	<link rel="stylesheet" href="/css/producto.css">	
 	<script type="text/javascript" src="/js/angular-1.4.0.js"></script>
-	<script type="text/javascript" src="/js/angular-route.js"></script>
 	<script type="text/javascript" src="/js/jquery-1.11.3.js"></script>
     <script type="text/javascript" src="/js/main.js"></script> 
 </head>
@@ -31,7 +29,7 @@
 			<div>
 				<nav class="menu-header center">
 					<ul>
-		       			<li class="inline menu-item"><a class="menu-item-link" href="{{ url('/') }}">HOME</a></li>
+		       			<li class="inline menu-item"><a class="menu-item-link" href="" ng-click="vm.getHome()">HOME</a></li>
 		       			<li class="inline menu-item"><a class="menu-item-link" href="{{ url('/') }}">QUIENES SOMOS</a></li>
 		       			<li class="inline menu-item"><a class="menu-item-link" href="{{ url('/') }}">MUJERES</a></li>
 		       			<li class="inline menu-item"><a class="menu-item-link" href="" ng-click="vm.getProductos()">HOMBRES</a></li>
@@ -66,7 +64,7 @@
 					</nav>
 				</div>
 				<div class="inline footer-right">
-					<a href="{{ url('/') }}" class="block center"><img class="footer-logo" src="/images/LOGO-01.png"></a>
+					<a href="{{ url('/') }}" class="block center"><img class="footer-logo" src="/images/logo-white.svg"></a>
 					<span class="block center footer-left-title">Suscríbete</span>
 					<span class="block center footer-left-parrafo">Entérate de nuestras promociones y novedades en Tipo</span>
 					<input class="block footer-left-inputtext" type="text">
