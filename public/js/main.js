@@ -12,6 +12,10 @@ controller('mainController', ['$scope', '$http', '$compile', function($scope, $h
   
 	var vm = this;
 	vm.destacados = [];
+	vm.generos = ['TODOS', 'HOMBRE', 'MUJER'];
+	vm.colecciones = ['uno', 'dos', 'tres'];
+	vm.colores = ['rojo', 'verde', 'azul'];
+	vm.categorias = ['efdds', 'sdf', 'asdasd', 'sfsdf', 'asdas'];
 
 	vm.getHome = function () {
 		$http.get('/inicio')
@@ -47,7 +51,18 @@ controller('mainController', ['$scope', '$http', '$compile', function($scope, $h
 		$http.get('/products/destacados')
 		.success(function (data) {
 			vm.destacados = data.slice(0,6);
-			console.log(vm.destacados[2].url_imagen)
+		})
+		.error(function (data) {
+			alert('Imposible cargar datos');
+		})
+	}
+
+	vm.getColecciones = function () {
+		$http.get('/coleccions')
+		.success(function (data) {
+			for(var ele in data) {
+				vm.colecciones.push(ele.coleccion);
+			}
 		})
 		.error(function (data) {
 			alert('Imposible cargar datos');

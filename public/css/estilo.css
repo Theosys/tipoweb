@@ -430,3 +430,10 @@ footer {
   border-color: #AFABAB;
 }
 
+.item-1 {
+  border: solid;
+  border-color: #AFABAB;
+  width: 100px;
+  margin: 10px 5px;
+}
+
