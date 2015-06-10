@@ -51,11 +51,11 @@
 	</div>
 	<div class="clear-right">
 		<div class="inline article-footer-list center">
-		<a ng-repeat="item in vm.destacados" href="#">
-			<div class="inline container3-product" ng-click="vm.getProductoByid(item.id)">
-				<img class="thumbnail2-product" ng-src="<%item.url_imagen%>" alt="">
+			<div class="inline container3-product" ng-repeat="item in vm.destacados">
+				<a  href="#"  ng-click="vm.getProductoByid(item.id)">					
+					<img class="thumbnail2-product" ng-src="<%item.url_imagen%>" alt="">					
+				</a>
 			</div>
-		</a>
 		</div>
 		<div>
 			<a class="inline article-footer-button" href="#">

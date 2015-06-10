@@ -55,7 +55,7 @@ class ProductController extends Controller {
 		$product->url_imagen = $request->input('url_imagen');
 		$product->save();
 
-		return redirect('/products')->with('notice', 'El producto ha sido creado correctamente.');
+		return redirect('/')->with('notice', 'El producto ha sido creado correctamente.');
 	}
 
 	/**
@@ -102,7 +102,7 @@ class ProductController extends Controller {
 		$product->url_imagen = $request->input('url_imagen');
 		$product->save();
 
-		return redirect('/products')->with('notice', 'El producto ha sido actualizado correctamente.');
+		return redirect('/')->with('notice', 'El producto ha sido actualizado correctamente.');
 	}
 
 	/**
@@ -115,7 +115,7 @@ class ProductController extends Controller {
 	{
 		$producto = Product::find($id);
    		$producto->delete();
-   		return redirect('/products')->with('notice', 'El producto ha sido eliminado correctamente.');
+   		return redirect('/')->with('notice', 'El producto ha sido eliminado correctamente.');
 	}
 
 
