@@ -22,4 +22,6 @@ Route::controllers([
 	'password' => 'Auth\PasswordController',
 ]);
 
+Route::get('products/destacados', 'ProductController@destacados');
+
 Route::resource('products', 'ProductController');

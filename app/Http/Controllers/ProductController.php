@@ -118,4 +118,16 @@ class ProductController extends Controller {
    		return redirect('/products')->with('notice', 'El producto ha sido eliminado correctamente.');
 	}
 
+
+	/**
+	 * Muestra los productos destacados
+	 *
+	 * @return Response
+	 */
+	public function destacados()
+	{
+		$productos = Product::all();
+   		return $productos;
+	}
+
 }

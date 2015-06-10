@@ -50,8 +50,12 @@
 		</div>
 	</div>
 	<div class="clear-right">
-		<div class="inline article-footer-list">
-			<img src="" alt="">
+		<div class="inline article-footer-list center">
+		<a ng-repeat="item in vm.destacados" href="#">
+			<div class="inline container3-product" ng-click="vm.getProductoByid(item.id)">
+				<img class="thumbnail2-product" ng-src="<%item.url_imagen%>" alt="">
+			</div>
+		</a>
 		</div>
 		<div>
 			<a class="inline article-footer-button" href="#">

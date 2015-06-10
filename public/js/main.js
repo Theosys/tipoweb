@@ -3,13 +3,15 @@
 *
 * Description
 */
-angular.module('angularApp', []).
+app = angular.module('angularApp', [], function($interpolateProvider) {
+        $interpolateProvider.startSymbol('<%');
+        $interpolateProvider.endSymbol('%>');
+    }).
 
 controller('mainController', ['$scope', '$http', '$compile', function($scope, $http, $compile){
   
 	var vm = this;
-
-	vm.contenido = "";
+	vm.destacados = [];
 
 	vm.getHome = function () {
 		$http.get('/inicio')
@@ -40,5 +42,20 @@ controller('mainController', ['$scope', '$http', '$compile', function($scope, $h
 			alert('Imposible cargar datos');
 		})
 	}
+
+	vm.getDestacados = function () {
+		$http.get('/products/destacados')
+		.success(function (data) {
+			vm.destacados = data.slice(0,6);
+			console.log(vm.destacados[2].url_imagen)
+		})
+		.error(function (data) {
+			alert('Imposible cargar datos');
+		})
+	}
+
+	angular.element(document).ready(function () {
+        vm.getDestacados();
+    });
 
 }]);

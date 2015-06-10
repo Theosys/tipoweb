@@ -291,18 +291,33 @@ footer {
 
 /*Estilos para los productos*/
 
-.container1-product{
+.container1-product {
   margin:20px;
   padding: 10px;
   border: solid;
   border-width: 2px;
 }
-.thumbnail1-product{
+
+.thumbnail1-product {
   max-height: 150px;
   width: auto;
 }
 
-.container2-product{
+.container3-product {
+  width: 150px;
+  height: 100px;
+  background: #ffffff;
+  margin: 25px 5px;
+}
+
+.thumbnail2-product {
+  position: static;
+  width: 150px;
+  max-height: 100px;
+  overflow: hidden;
+}
+
+.container2-product {
   width: 60%;
   margin: 20px 0px 20px 50px;
 }
