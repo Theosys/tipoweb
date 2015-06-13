@@ -13,7 +13,7 @@
 		</div>
 		<div class="container-1-sub">
 			<h2>COLECCIONES</h2>
-			<p  class="item-1" ng-repeat="item in vm.colecciones"><%item%></p>			
+			<p  class="item-1" ng-repeat="item in vm.colecciones"><%item.coleccion%></p>			
 		</div>
 		<div class="container-1-sub">
 			<h2>COLOR</h2>

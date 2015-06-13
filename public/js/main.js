@@ -13,7 +13,7 @@ controller('mainController', ['$scope', '$http', '$compile', function($scope, $h
 	var vm = this;
 	vm.destacados = [];
 	vm.generos = ['TODOS', 'HOMBRE', 'MUJER'];
-	vm.colecciones = ['uno', 'dos', 'tres'];
+	vm.colecciones = [];
 	vm.colores = ['rojo', 'verde', 'azul'];
 	vm.categorias = ['efdds', 'sdf', 'asdasd', 'sfsdf', 'asdas'];
 
@@ -57,12 +57,37 @@ controller('mainController', ['$scope', '$http', '$compile', function($scope, $h
 		})
 	}
 
+	
+
+
+
+
+
 	vm.getColecciones = function () {
 		$http.get('/coleccions')
 		.success(function (data) {
-			for(var ele in data) {
-				vm.colecciones.push(ele.coleccion);
-			}
+			vm.colecciones = data;
+		})
+		.error(function (data) {
+			alert('Imposible cargar datos');
+		})
+	}
+
+	vm.agregarColeccion = function () {
+		$http.post('/coleccions')
+		.success(function (data) {
+			console.log(data);
+			vm.colecciones = data;
+		})
+		.error(function (data) {
+			alert('Imposible cargar datos');
+		})
+	}
+
+	vm.deleteColeccion = function (id) {
+		$http.delete('/coleccions/' + id)
+		.success(function (data) {
+			vm.colecciones = data;
 		})
 		.error(function (data) {
 			alert('Imposible cargar datos');
@@ -71,6 +96,10 @@ controller('mainController', ['$scope', '$http', '$compile', function($scope, $h
 
 	angular.element(document).ready(function () {
         vm.getDestacados();
+        vm.getColecciones();
+        //vm.getGeneros();
+        //vm.getColores();
+        //vm.getCategorias();
     });
 
 }]);

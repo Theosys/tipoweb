@@ -16,6 +16,7 @@ class CreateColeccionesTable extends Migration {
     		$table->create();
     		$table->increments('id');
     		$table->string('coleccion');
+    		$table->timestamps();
     	});
 	}
 

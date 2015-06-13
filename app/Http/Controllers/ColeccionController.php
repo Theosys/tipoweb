@@ -16,18 +16,19 @@ class ColeccionController extends Controller {
 	 */
 	public function index()
 	{
-		$Coleccions = Coleccion::all();
-		return $Coleccions;
+		$coleccions = Coleccion::all();
+		return $coleccions;
 	}
 
 	/**
 	 * Show the form for creating a new resource.
-	 *
+	 * Esta funcion servira para administrar las colecciones
 	 * @return Response
 	 */
 	public function create()
 	{
-		//
+		$coleccions = Coleccion::all();
+		return view('coleccion.index')->with('colecciones', $coleccions);
 	}
 
 	/**
@@ -35,9 +36,13 @@ class ColeccionController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store()
+	public function store(Request $request)
 	{
-		//
+		$colec = new Coleccion();
+		$colec->coleccion = 'verano';
+		$colec->save();
+		$coleccions = Coleccion::all();
+		return $coleccions;
 	}
 
 	/**
@@ -81,7 +86,10 @@ class ColeccionController extends Controller {
 	 */
 	public function destroy($id)
 	{
-		//
+		$colec = Coleccion::find($id);
+   		$colec->delete();
+   		$coleccions = Coleccion::all();
+		return $coleccions;
 	}
 
 }
