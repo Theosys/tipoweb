@@ -5,9 +5,9 @@ use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
 
-use App\Coleccion;
+use App\Genero;
 
-class ColeccionController extends Controller {
+class GeneroController extends Controller {
 
 	/**
 	 * Display a listing of the resource.
@@ -16,19 +16,19 @@ class ColeccionController extends Controller {
 	 */
 	public function index()
 	{
-		$coleccions = Coleccion::all();
-		return $coleccions;
+		$generos = Genero::all();
+		return $generos;
 	}
 
 	/**
 	 * Show the form for creating a new resource.
-	 * Esta funcion servira para administrar las colecciones
+	 *
 	 * @return Response
 	 */
 	public function create()
 	{
-		$coleccions = Coleccion::all();
-		return view('coleccion.index')->with('colecciones', $coleccions);
+		$generos = Genero::all();
+		return view('genero.index')->with('generos', $generos);
 	}
 
 	/**
@@ -39,11 +39,11 @@ class ColeccionController extends Controller {
 	public function store(Request $request)
 	{
 		$data = $request->all();
-		$colec = new Coleccion();
-		$colec->coleccion = $data['nombre'];
-		$colec->save();
-		$coleccions = Coleccion::all();
-		return $coleccions;
+		$genero = new Genero();
+		$genero->genero = $data['nombre'];
+		$genero->save();
+		$generos = Genero::all();
+		return $generos;
 	}
 
 	/**
@@ -77,11 +77,11 @@ class ColeccionController extends Controller {
 	public function update($id, Request $request)
 	{
 		$data = $request->all();
-		$colec = Coleccion::find($id);
-		$colec->coleccion = $data['nombre'];
-   		$colec->save();
-   		$coleccions = Coleccion::all();
-		return $coleccions;
+		$genero = Genero::find($id);
+		$genero->genero = $data['nombre'];
+		$genero->save();
+		$generos = Genero::all();
+		return $generos;
 	}
 
 	/**
@@ -92,10 +92,10 @@ class ColeccionController extends Controller {
 	 */
 	public function destroy($id)
 	{
-		$colec = Coleccion::find($id);
-   		$colec->delete();
-   		$coleccions = Coleccion::all();
-		return $coleccions;
+		$genero = Genero::find($id);
+		$genero->delete();
+		$generos = Genero::all();
+		return $generos;
 	}
 
 }

@@ -27,3 +27,5 @@ Route::get('products/destacados', 'ProductController@destacados');
 Route::resource('products', 'ProductController');
 
 Route::resource('coleccions', 'ColeccionController');
+
+Route::resource('generos', 'GeneroController');

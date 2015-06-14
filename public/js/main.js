@@ -12,7 +12,7 @@ controller('mainController', ['$scope', '$http', '$compile', function($scope, $h
   
 	var vm = this;
 	vm.destacados = [];
-	vm.generos = ['TODOS', 'HOMBRE', 'MUJER'];
+	vm.generos = [];
 	vm.colecciones = [];
 	vm.colores = ['rojo', 'verde', 'azul'];
 	vm.categorias = ['efdds', 'sdf', 'asdasd', 'sfsdf', 'asdas'];
@@ -74,9 +74,25 @@ controller('mainController', ['$scope', '$http', '$compile', function($scope, $h
 	}
 
 	vm.agregarColeccion = function () {
-		$http.post('/coleccions')
+		data = {
+			'nombre': vm.coleccion_nueva
+		}
+		$http.post('/coleccions', data)
 		.success(function (data) {
 			console.log(data);
+			vm.colecciones = data;
+		})
+		.error(function (data) {
+			alert('Imposible cargar datos');
+		})
+	}
+
+	vm.editarColeccion = function (id, colec) {
+		data = {
+			'nombre': colec
+		}
+		$http.put('/coleccions/' + id, data)
+		.success(function (data) {
 			vm.colecciones = data;
 		})
 		.error(function (data) {
@@ -94,10 +110,63 @@ controller('mainController', ['$scope', '$http', '$compile', function($scope, $h
 		})
 	}
 
+
+
+
+
+
+
+	vm.getGeneros = function () {
+		$http.get('/generos')
+		.success(function (data) {
+			vm.generos = data;
+		})
+		.error(function (data) {
+			alert('Imposible cargar datos');
+		})
+	}
+
+	vm.agregarGenero = function () {
+		data = {
+			'nombre': vm.genero_nuevo
+		}
+		$http.post('/generos', data)
+		.success(function (data) {
+			console.log(data);
+			vm.generos = data;
+		})
+		.error(function (data) {
+			alert('Imposible cargar datos');
+		})
+	}
+
+	vm.editarGenero = function (id, genero) {
+		data = {
+			'nombre': genero
+		}
+		$http.put('/generos/' + id, data)
+		.success(function (data) {
+			vm.generos = data;
+		})
+		.error(function (data) {
+			alert('Imposible cargar datos');
+		})
+	}
+
+	vm.deleteGenero = function (id) {
+		$http.delete('/generos/' + id)
+		.success(function (data) {
+			vm.generos = data;
+		})
+		.error(function (data) {
+			alert('Imposible cargar datos');
+		})
+	}
+
 	angular.element(document).ready(function () {
         vm.getDestacados();
         vm.getColecciones();
-        //vm.getGeneros();
+        vm.getGeneros();
         //vm.getColores();
         //vm.getCategorias();
     });

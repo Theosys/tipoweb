@@ -9,7 +9,7 @@
 <h1 class="container-1-title">PRODUCTOS</h1>
 	<div class="container-1">
 		<div class="container-1-sub center">
-			<span class="item-1 inline center" ng-repeat="item in vm.generos"><%item%></span>
+			<span class="item-1 inline center" ng-repeat="item in vm.generos"><%item.genero%></span>
 		</div>
 		<div class="container-1-sub">
 			<h2>COLECCIONES</h2>
