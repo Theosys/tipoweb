@@ -1,8 +1,7 @@
 @extends('app')
 
 @section('content')
-
-<h1>Administrar Colecciones</h1>
+<h1>Administrar Categorias</h1>
 <table>
 	<thead>
 		<th>
@@ -12,7 +11,7 @@
 		</th>
 		<th>
 			<div>
-				COLECCION
+				GENERO
 			</div>
 		</th>
 		<th>
@@ -22,21 +21,21 @@
 		</th>
 	</thead>
 	<tbody>
-		<tr ng-repeat="item in vm.colecciones">
+		<tr ng-repeat="item in vm.categorias">
 			<td>
 				<div><%item.id%></div>
 			</td>
 			<td>
 				<div>
-					<input type="text" ng-model="item.coleccion">
+					<input type="text" ng-model="item.categoria">
 				</div>
 			</td>
 			<td>
 				<div>
-					<span ng-click="vm.editarColeccion(item.id, item.coleccion)">
+					<span ng-click="vm.editarCategoria(item.id, item.categoria)">
 						Editar
 					</span>
-					<span ng-click="vm.deleteColeccion(item.id)">
+					<span ng-click="vm.deleteCategoria(item.id)">
 						Eliminar
 					</span>
 				</div>
@@ -46,10 +45,10 @@
 	<tfoot>
 		<td>
 			<div>
-				<input type="text" ng-model="vm.coleccion_nueva">
+				<input type="text" ng-model="vm.categoria_nueva">
 			</div>
 		</td>
-		<td ng-click="vm.agregarColeccion()">
+		<td ng-click="vm.agregarCategoria()">
 			<div>
 				Agregar...
 			</div>

@@ -29,3 +29,7 @@ Route::resource('products', 'ProductController');
 Route::resource('coleccions', 'ColeccionController');
 
 Route::resource('generos', 'GeneroController');
+
+Route::resource('categorias', 'CategoriaController');
+
+Route::resource('colores', 'ColorController');

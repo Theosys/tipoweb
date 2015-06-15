@@ -2,7 +2,7 @@
 
 @section('content')
 
-<h1>Administrar Colecciones</h1>
+<h1>Administrar Colores</h1>
 <table>
 	<thead>
 		<th>
@@ -22,21 +22,21 @@
 		</th>
 	</thead>
 	<tbody>
-		<tr ng-repeat="item in vm.colecciones">
+		<tr ng-repeat="item in vm.colores">
 			<td>
 				<div><%item.id%></div>
 			</td>
 			<td>
 				<div>
-					<input type="text" ng-model="item.coleccion">
+					<input type="text" ng-model="item.color">
 				</div>
 			</td>
 			<td>
 				<div>
-					<span ng-click="vm.editarColeccion(item.id, item.coleccion)">
+					<span ng-click="vm.editarColor(item.id, item.color)">
 						Editar
 					</span>
-					<span ng-click="vm.deleteColeccion(item.id)">
+					<span ng-click="vm.deleteColor(item.id)">
 						Eliminar
 					</span>
 				</div>
@@ -46,10 +46,10 @@
 	<tfoot>
 		<td>
 			<div>
-				<input type="text" ng-model="vm.coleccion_nueva">
+				<input type="text" ng-model="vm.color_nuevo">
 			</div>
 		</td>
-		<td ng-click="vm.agregarColeccion()">
+		<td ng-click="vm.agregarColor()">
 			<div>
 				Agregar...
 			</div>

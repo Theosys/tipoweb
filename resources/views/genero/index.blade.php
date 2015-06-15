@@ -1,7 +1,7 @@
 @extends('app')
 
 @section('content')
-
+<h1>Administrar Generos</h1>
 <table>
 	<thead>
 		<th>

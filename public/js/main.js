@@ -14,8 +14,8 @@ controller('mainController', ['$scope', '$http', '$compile', function($scope, $h
 	vm.destacados = [];
 	vm.generos = [];
 	vm.colecciones = [];
-	vm.colores = ['rojo', 'verde', 'azul'];
-	vm.categorias = ['efdds', 'sdf', 'asdasd', 'sfsdf', 'asdas'];
+	vm.colores = [];
+	vm.categorias = [];
 
 	vm.getHome = function () {
 		$http.get('/inicio')
@@ -128,7 +128,7 @@ controller('mainController', ['$scope', '$http', '$compile', function($scope, $h
 
 	vm.agregarGenero = function () {
 		data = {
-			'nombre': vm.genero_nuevo
+			'genero': vm.genero_nuevo
 		}
 		$http.post('/generos', data)
 		.success(function (data) {
@@ -142,7 +142,7 @@ controller('mainController', ['$scope', '$http', '$compile', function($scope, $h
 
 	vm.editarGenero = function (id, genero) {
 		data = {
-			'nombre': genero
+			'genero': genero
 		}
 		$http.put('/generos/' + id, data)
 		.success(function (data) {
@@ -163,12 +163,121 @@ controller('mainController', ['$scope', '$http', '$compile', function($scope, $h
 		})
 	}
 
+
+
+
+	
+
+	vm.getCategorias = function () {
+		$http.get('/categorias')
+		.success(function (data) {
+			vm.categorias = data;
+		})
+		.error(function (data) {
+			alert('Imposible cargar datos');
+		})
+	}
+
+	vm.agregarCategoria = function () {
+		data = {
+			'categoria': vm.categoria_nueva
+		}
+		$http.post('/categorias', data)
+		.success(function (data) {
+			console.log(data);
+			vm.categorias = data;
+		})
+		.error(function (data) {
+			alert('Imposible cargar datos');
+		})
+	}
+
+	vm.editarCategoria = function (id, categoria) {
+		data = {
+			'categoria': categoria
+		}
+		$http.put('/categorias/' + id, data)
+		.success(function (data) {
+			vm.categorias = data;
+		})
+		.error(function (data) {
+			alert('Imposible cargar datos');
+		})
+	}
+
+	vm.deleteCategoria = function (id) {
+		$http.delete('/categorias/' + id)
+		.success(function (data) {
+			vm.categorias = data;
+		})
+		.error(function (data) {
+			alert('Imposible cargar datos');
+		})
+	}
+
+
+
+
+
+
+
+	vm.getColores = function () {
+		$http.get('/colores')
+		.success(function (data) {
+			vm.colores = data;
+		})
+		.error(function (data) {
+			alert('Imposible cargar datos');
+		})
+	}
+
+	vm.agregarColor = function () {
+		data = {
+			'color': vm.color_nuevo
+		}
+		$http.post('/colores', data)
+		.success(function (data) {
+			console.log(data);
+			vm.colores = data;
+		})
+		.error(function (data) {
+			alert('Imposible cargar datos');
+		})
+	}
+
+	vm.editarColor = function (id, color) {
+		data = {
+			'nombre': color
+		}
+		$http.put('/colores/' + id, data)
+		.success(function (data) {
+			vm.colores = data;
+		})
+		.error(function (data) {
+			alert('Imposible cargar datos');
+		})
+	}
+
+	vm.deleteColor = function (id) {
+		$http.delete('/colores/' + id)
+		.success(function (data) {
+			vm.colores = data;
+		})
+		.error(function (data) {
+			alert('Imposible cargar datos');
+		})
+	}
+
+
+
+
+
 	angular.element(document).ready(function () {
         vm.getDestacados();
         vm.getColecciones();
         vm.getGeneros();
-        //vm.getColores();
-        //vm.getCategorias();
+        vm.getColores();
+        vm.getCategorias();
     });
 
 }]);

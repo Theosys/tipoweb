@@ -17,12 +17,12 @@
 		</div>
 		<div class="container-1-sub">
 			<h2>COLOR</h2>
-			<p  class="item-1" ng-repeat="item in vm.colores"><%item%></p>
+			<p  class="item-1" ng-repeat="item in vm.colores"><%item.color%></p>
 		</div>
 		<div class="container-1-sub">
 			<h2>CATEGORIAS</h2>
 			<div ng-repeat="item in vm.categorias">
-				<input type="checkbox"><%item%></input>
+				<input type="checkbox"><%item.categoria%></input>
 			</div>
 		</div>
 	</div>

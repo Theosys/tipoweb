@@ -5,9 +5,9 @@ use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
 
-use App\Coleccion;
+use App\Color;
 
-class ColeccionController extends Controller {
+class ColorController extends Controller {
 
 	/**
 	 * Display a listing of the resource.
@@ -16,18 +16,18 @@ class ColeccionController extends Controller {
 	 */
 	public function index()
 	{
-		$coleccions = Coleccion::all();
-		return $coleccions;
+		$colores = Color::all();
+		return $colores;
 	}
 
 	/**
 	 * Show the form for creating a new resource.
-	 * Esta funcion servira para administrar las colecciones
+	 *
 	 * @return Response
 	 */
 	public function create()
 	{
-		return view('coleccion.index');
+		return view('color.index');
 	}
 
 	/**
@@ -38,11 +38,11 @@ class ColeccionController extends Controller {
 	public function store(Request $request)
 	{
 		$data = $request->all();
-		$colec = new Coleccion();
-		$colec->coleccion = $data['nombre'];
-		$colec->save();
-		$coleccions = Coleccion::all();
-		return $coleccions;
+		$color = new Color();
+		$color->color = $data['color'];
+		$color->save();
+		$colores = Color::all();
+		return $colores;
 	}
 
 	/**
@@ -76,11 +76,11 @@ class ColeccionController extends Controller {
 	public function update($id, Request $request)
 	{
 		$data = $request->all();
-		$colec = Coleccion::find($id);
-		$colec->coleccion = $data['nombre'];
-   		$colec->save();
-   		$coleccions = Coleccion::all();
-		return $coleccions;
+		$color = Color::find($id);
+		$color->color = $data['color'];
+		$color->save();
+		$colores = Color::all();
+		return $colores;
 	}
 
 	/**
@@ -91,10 +91,10 @@ class ColeccionController extends Controller {
 	 */
 	public function destroy($id)
 	{
-		$colec = Coleccion::find($id);
-   		$colec->delete();
-   		$coleccions = Coleccion::all();
-		return $coleccions;
+		$color = Color::find($id);
+		$color->delete();
+		$colores = Color::all();
+		return $colores;
 	}
 
 }

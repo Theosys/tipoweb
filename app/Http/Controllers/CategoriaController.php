@@ -5,9 +5,9 @@ use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
 
-use App\Coleccion;
+use App\Categoria;
 
-class ColeccionController extends Controller {
+class CategoriaController extends Controller {
 
 	/**
 	 * Display a listing of the resource.
@@ -16,18 +16,18 @@ class ColeccionController extends Controller {
 	 */
 	public function index()
 	{
-		$coleccions = Coleccion::all();
-		return $coleccions;
+		$categorias = Categoria::all();
+		return $categorias;
 	}
 
 	/**
 	 * Show the form for creating a new resource.
-	 * Esta funcion servira para administrar las colecciones
+	 *
 	 * @return Response
 	 */
 	public function create()
 	{
-		return view('coleccion.index');
+		return view('categoria.index');
 	}
 
 	/**
@@ -38,11 +38,11 @@ class ColeccionController extends Controller {
 	public function store(Request $request)
 	{
 		$data = $request->all();
-		$colec = new Coleccion();
-		$colec->coleccion = $data['nombre'];
-		$colec->save();
-		$coleccions = Coleccion::all();
-		return $coleccions;
+		$categoria = new Categoria();
+		$categoria->categoria = $data['categoria'];
+		$categoria->save();
+		$categorias = Categoria::all();
+		return $categorias;
 	}
 
 	/**
@@ -76,11 +76,11 @@ class ColeccionController extends Controller {
 	public function update($id, Request $request)
 	{
 		$data = $request->all();
-		$colec = Coleccion::find($id);
-		$colec->coleccion = $data['nombre'];
-   		$colec->save();
-   		$coleccions = Coleccion::all();
-		return $coleccions;
+		$categoria = Categoria::find($id);
+		$categoria->categoria = $data['categoria'];
+		$categoria->save();
+		$categorias = Categoria::all();
+		return $categorias;
 	}
 
 	/**
@@ -91,10 +91,10 @@ class ColeccionController extends Controller {
 	 */
 	public function destroy($id)
 	{
-		$colec = Coleccion::find($id);
-   		$colec->delete();
-   		$coleccions = Coleccion::all();
-		return $coleccions;
+		$categoria = Categoria::find($id);
+		$categoria->delete();
+		$categorias = Categoria::all();
+		return $categorias;
 	}
 
 }

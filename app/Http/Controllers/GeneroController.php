@@ -27,8 +27,7 @@ class GeneroController extends Controller {
 	 */
 	public function create()
 	{
-		$generos = Genero::all();
-		return view('genero.index')->with('generos', $generos);
+		return view('genero.index');
 	}
 
 	/**
@@ -40,7 +39,7 @@ class GeneroController extends Controller {
 	{
 		$data = $request->all();
 		$genero = new Genero();
-		$genero->genero = $data['nombre'];
+		$genero->genero = $data['genero'];
 		$genero->save();
 		$generos = Genero::all();
 		return $generos;
@@ -78,7 +77,7 @@ class GeneroController extends Controller {
 	{
 		$data = $request->all();
 		$genero = Genero::find($id);
-		$genero->genero = $data['nombre'];
+		$genero->genero = $data['genero'];
 		$genero->save();
 		$generos = Genero::all();
 		return $generos;
