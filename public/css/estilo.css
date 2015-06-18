@@ -6,8 +6,6 @@
 }
 
 body {
-  background:url('../images/fondo 2.png') no-repeat center;
-  background-size: cover;
   font-family: "Open Sans", sans-serif;
   font-size: 14px;
   font-weight: 400;
@@ -21,7 +19,18 @@ footer {
   color: #ffffff;
 }
 
+.fondo {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  background:url('../images/fondo 2.png') no-repeat center;
+  background-size: cover;
+}
+
 .page {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
   background:url('../images/fondo 1.png') no-repeat;
   background-size: cover;
 }
@@ -50,6 +59,10 @@ footer {
   clear: right;
 }
 
+.clear-both {
+  clear: both;
+}
+
 .logo {
   height: 200px;
   width: auto;
@@ -75,6 +88,7 @@ footer {
 
 .menu-header {
   position: relative;
+  padding: 0 0 30px 0;
 }
 
 .menu-item {
@@ -188,7 +202,7 @@ footer {
 }
 
 .article-left {
-  width: 45%;
+  width: 40%;
   height: 550px;
   float: left;
   padding: 30px;
@@ -196,7 +210,7 @@ footer {
 }
 
 .article-right {
-  width: 55%;
+  width: 60%;
   padding: 20px;
   box-sizing: border-box;
   height: 550px;
@@ -214,7 +228,7 @@ footer {
 
 .article-parrafo-1{
   padding: 0 22%;
-  font-size: 25px;
+  font-size: 23px;
   color: #5B5D68;
 }
 
@@ -404,6 +418,48 @@ footer {
   float: right;
 }
 
+.triangle {
+  position: relative;
+  float: right;
+  top: -103px;
+  width: 0;
+  height: 0;
+  border-right: 100px solid #2A7A9F;
+  border-top: 65px solid transparent;
+  border-left: 50px solid transparent;
+  border-bottom: 35px solid #2A7A9F;
+}
+
+.content-triangle {
+  position: relative;
+  float: right;
+  top: -103px;
+  width: 0;
+  height: 0;
+  color: #ffffff;
+  font-size: 10px;
+}
+
+.article-logo {
+  position: relative;
+  top: 20px;
+  left: 115px;
+  width: 30px;
+}
+
+.product-details-1 {
+  position: relative;
+  left: 90px;
+  top: 30px;
+
+}
+
+.product-details-2 {
+  position: relative;
+  top: 40px;
+  left: 40px;
+  width: 140px;
+}
 
 
 
@@ -420,7 +476,7 @@ footer {
   box-sizing: border-box;
   margin: 0;
   padding: 10px 5px;
-  background: rgba(15, 95, 125, 0.9);
+  background: #2A7A9F;
   color: #ffffff;
   font-weight: bold;
 }
@@ -433,7 +489,15 @@ footer {
 .item-1 {
   border: solid;
   border-color: #AFABAB;
-  width: 100px;
   margin: 10px 5px;
+  max-width: 100px;
+  padding: 10px 3px;
+}
+
+.container-1-subtitle {
+  border-bottom: solid;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
 }
 

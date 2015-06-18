@@ -10,6 +10,7 @@
     <script type="text/javascript" src="/js/main.js"></script> 
 </head>
 <body ng-app="angularApp" ng-controller="mainController as vm">
+<div class="fondo">
 	<div class="page">
 		<header>
 			<div class="inline">
@@ -43,8 +44,8 @@
 		<section id="content">
 			@yield('content')
 		</section>
-		<footer>
-			<div class="footer-top clear-right">
+		<footer class="clear-both block">
+			<div class="footer-top clear-both">
 				<div class="inline footer-left">
 					<span class="block footer-title center"><b>La tipografía aplicada al diseño</b> se apodera de la moda urbana</span>
 					<p class="block footer-parrafo justify">"Nuestro trabajo consta el ponerle en cada pieza nuestro esfuerzo, pasión y corazón, elementos 
@@ -82,5 +83,6 @@
 			</div>
 		</footer>
 	</div>
+</div>
 </body>
 </html>
